@@ -1,12 +1,10 @@
 import cgi
 import json
-import os
 import posixpath
 import shutil
 import tempfile
 import traceback
 from contextlib import closing
-from io import StringIO
 from urllib.parse import urlsplit
 
 import mutagen
