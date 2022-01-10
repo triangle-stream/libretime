@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "859db0c19832f3e981bccb7870b7a330",
+    "content-hash": "19b02cf5813782631e112ef60993ea53",
     "packages": [
         {
             "name": "composer/semver",
@@ -155,6 +155,80 @@
             "time": "2021-09-22T16:34:51+00:00"
         },
         {
+            "name": "jooola/celery-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jooola/celery-php.git",
+                "reference": "395c556159d0c143ffc12cb78f7ba405252dc748"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jooola/celery-php/zipball/395c556159d0c143ffc12cb78f7ba405252dc748",
+                "reference": "395c556159d0c143ffc12cb78f7ba405252dc748",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "ext-amqp": "*",
+                "php-amqplib/php-amqplib": ">=3.0",
+                "phpunit/phpunit": "<6.0.0",
+                "predis/predis": "*"
+            },
+            "suggest": {
+                "ext-amqp": "Adds support for the AMQP extension for PHP backend",
+                "php-amqplib/php-amqplib": "Adds support for the php-amqplib, AMQP library for PHP, backend",
+                "predis/predis": "Adds support for the predis, PHP client library for Redis, backend"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Celery\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Celery\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "GDR!",
+                    "email": "info@massivescale.net",
+                    "homepage": "http://massivescale.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP client for Celery task queue",
+            "homepage": "https://github.com/gjedeer/celery-php/",
+            "keywords": [
+                "amqp",
+                "celery",
+                "cron",
+                "python",
+                "queue",
+                "redis",
+                "task"
+            ],
+            "support": {
+                "issues": "https://github.com/gjedeer/celery-php/issues",
+                "docs": "https://github.com/gjedeer/celery-php/",
+                "source": "https://github.com/jooola/celery-php/tree/master"
+            },
+            "time": "2022-01-10T15:49:18+00:00"
+        },
+        {
             "name": "jooola/propel1",
             "version": "dev-master",
             "source": {
@@ -220,65 +294,6 @@
                 "source": "https://github.com/jooola/propel1/tree/master"
             },
             "time": "2021-10-03T22:21:13+00:00"
-        },
-        {
-            "name": "massivescale/celery-php",
-            "version": "2.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gjedeer/celery-php.git",
-                "reference": "4725dffec3ba03835191ea9d05bbd2777d4bc46f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gjedeer/celery-php/zipball/4725dffec3ba03835191ea9d05bbd2777d4bc46f",
-                "reference": "4725dffec3ba03835191ea9d05bbd2777d4bc46f",
-                "shasum": ""
-            },
-            "suggest": {
-                "predis/predis": "Adds support for the predis, PHP client library for Redis, backend",
-                "videlalvaro/php-amqplib": "Adds support for the php-amqplib, AMQP library for PHP, backend"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "celery.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "GDR!",
-                    "email": "info@massivescale.net",
-                    "homepage": "http://massivescale.net/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP client for Celery task queue",
-            "homepage": "https://github.com/gjedeer/celery-php/",
-            "keywords": [
-                "AMQP",
-                "celery",
-                "cron",
-                "python",
-                "queue",
-                "redis",
-                "task"
-            ],
-            "support": {
-                "docs": "https://github.com/gjedeer/celery-php/",
-                "issues": "https://github.com/gjedeer/celery-php/issues",
-                "source": "https://github.com/gjedeer/celery-php/tree/master"
-            },
-            "time": "2016-10-16T07:17:19+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -4172,7 +4187,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "jooola/propel1": 20
+        "jooola/propel1": 20,
+        "jooola/celery-php": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
