@@ -6,12 +6,9 @@ After=network.target
 Environment=RMQ_CONFIG_FILE=/etc/airtime/airtime.conf
 WorkingDirectory=/srv/airtime
 ExecStart=/usr/local/bin/celery \
-    --app libretime_worker.tasks:celery \
-    --time-limit=1800
-    --concurrency=1
-    --config=config \
-    --loglevel INFO \
-    worker
+    --app libretime_worker.tasks \
+    --config libretime_worker.config \
+    worker --loglevel INFO
 Restart=always
 Group=celery
 User=celery

@@ -23,14 +23,16 @@ _host, _port, _username, _password, _vhost = get_broker()
 
 broker_url = f"amqp://{_username}:{_password}@{_host}:{_port}/{_vhost}"
 
+worker_concurrency = 1
+event_queue_expires = 900
+
 result_backend = "rpc://"
 result_persistent = True
 result_expires = 900
 result_exchange = "celeryresults"  # needed due to php-celery
 
+task_time_limit = 1800
 task_queues = (
     Queue("podcast", exchange=Exchange("podcast"), routing_key="podcast"),
     Queue(exchange=Exchange("celeryresults"), auto_delete=True),
 )
-
-event_queue_expires = 900
