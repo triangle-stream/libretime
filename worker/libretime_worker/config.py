@@ -16,12 +16,12 @@ def get_broker():
     )
 
 
-host, port, username, password, vhost = get_broker()
+_host, _port, _username, _password, _vhost = get_broker()
 
 # Celery settings
 # See https://docs.celeryproject.org/en/stable/userguide/configuration.html
 
-broker_url = f"amqp://{username}:{password}@{host}:{port}/{vhost}"
+broker_url = f"amqp://{_username}:{_password}@{_host}:{_port}/{_vhost}"
 
 result_backend = "rpc://"
 result_persistent = True
